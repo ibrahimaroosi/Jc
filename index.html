@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juwayriyah Collection</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Juwayriyah Collection</h1>
+
+    <div>
+        <label for="productName">Product:</label>
+        <input type="text" id="productName" placeholder="Enter product name">
+    </div>
+
+    <div>
+        <label for="buyPrice">Buy Price:</label>
+        <input type="number" id="buyPrice" placeholder="Enter buy price">
+    </div>
+
+    <div>
+        <label for="sellPrice">Sell Price:</label>
+        <input type="number" id="sellPrice" placeholder="Enter sell price">
+    </div>
+
+    <div>
+        <label for="sellingDate">Selling Date:</label>
+        <input type="date" id="sellingDate">
+    </div>
+
+    <div>
+        <label for="delivered">Delivered:</label>
+        <input type="checkbox" id="delivered">
+    </div>
+
+    <button id="addSaleButton" onclick="addSale()">Add Sale</button>
+
+    <div>
+        <label for="filterOption">Filter By:</label>
+        <select id="filterOption" onchange="updateFilterInput()">
+            <option value="date">Date</option>
+            <option value="month">Month</option>
+            <option value="year">Year</option>
+        </select>
+    </div>
+
+    <div id="filterInput"></div>
+
+    <button id="filterSalesButton" onclick="filterSales()">Filter Sales</button>
+
+    <div>
+        <strong>Total Products Sold: </strong><span id="totalProductsSold">0</span>
+    </div>
+
+    <div>
+        <strong>Total Profit: </strong><span id="totalProfit">0</span>
+    </div>
+
+    <ul id="salesList"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
